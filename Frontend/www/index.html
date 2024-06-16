@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Pizza KMA</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <img src="assets/images/discount.svg" alt="Discount" class="discount-badge">
+    <div class="discount-text">ЦЬОГО ТИЖНЯ НА ВСЕ</div>
+    <div class="percentage-text">-20%</div>
+    <div class="flag-badge top">
+        <div class="logo" style="font-size: 16px;">PIZZA</div>
+        <div class="logo" style="font-size: 25px;">KMA</div>
+    </div>
+
+    <header>
+        <div class="top-bar">
+            <div class="phone">
+                <span>(044) 222 5 222</span>
+            </div>
+            <div class="work-message">
+                <span>24 години/7 днів на тиждень</span>
+            </div>
+            <div class="delivery-message">
+                <span>Безкоштовна доставка піци</span>
+            </div>
+            <button class="login-button">Ввійти</button>
+        </div>
+        <div class="bottom-bar">Піцa</div>
+    </header>
+    
+    <main>
+        <div class="container">
+            <div class="pizza-header">
+                <h2>Усі піци <span class="pizza-count">0</span></h2>
+            </div>
+            <div class="pizza-categories">
+                <button class="pizza-category" data-category="all">Усі</button>
+                <button class="pizza-category" data-category="meat">М'ясні</button>
+                <button class="pizza-category" data-category="pineapple">З ананасами</button>
+                <button class="pizza-category" data-category="mushrooms">З грибами</button>
+                <button class="pizza-category" data-category="seafood">З морепродуктами</button>
+                <button class="pizza-category" data-category="vega">Вега</button>
+            </div>
+            <section id="pizza-list" class="pizza-list">
+                <!-- Вміст вашого список піц буде заповнюватися програмно -->
+            </section>
+        </div>
+
+        <div id="cart" class="cart">
+            <button id="clear-cart" class="btn-clear-cart">Очистити замовлення</button>
+            <h2>Замовлення <span class="cart-count">0</span></h2>
+            <div id="cart-items">
+                <!-- Піци у кошику завантажуються тут -->
+            </div>
+            <div class="cart-total">
+                <span>Сума замовлення:</span>
+                <span id="total-amount">0 грн</span>
+            </div>
+            <button id="order-button" class="btn-order">Замовити</button>
+        </div>
+    </main>
+    
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

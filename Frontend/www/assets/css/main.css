@@ -1,0 +1,402 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    min-height: 100vh;
+}
+
+header {
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgba(0, 0, 0, 0.777);
+    padding: 10px;
+    z-index: 1000;
+}
+
+.top-bar {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 5px;
+    margin-bottom: 8px;
+    color: #9e9e9e;
+}
+
+.phone {
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+    font-size: 19px;
+    color: #ababab;
+    margin-left: 110px;
+}
+
+.work-message {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+    font-size: 14px;
+    color: #ababab;
+}
+
+.delivery-message {
+    margin-top: 3px;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    color: #ababab;
+    margin-right: 380px;
+}
+
+.bottom-bar {
+    width: 100%;
+    display: flex;
+    border-top: 2px solid rgb(158, 158, 158);
+    color: #ffffff;
+    padding-top: 8px;
+    font-size: 18px;
+    margin-left: 110px;
+}
+
+.login-button {
+    background-color: #ff8c00;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    align-items: flex-end;
+}
+
+main {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    max-width: 1200px;
+    padding: 20px;
+    box-sizing: border-box;
+    flex: 1;
+    margin-top: 50px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 80%; /* Adjust width to account for the cart */
+}
+
+.pizza-header {
+    flex-wrap: wrap;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.pizza-header h2 {
+    text-align: center;
+    font-size: 30px;
+}
+
+.pizza-categories {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.pizza-category {
+    background-color: #ff8c00;
+    color: #f8f8f8;
+    border: 1px solid #ccc;
+    padding: 8px 16px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.pizza-count {
+    background-color: #f60;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 40%;
+    font-size: 14px;
+}
+
+.pizza-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: stretch;
+    margin: 0; /* Видалити внутрішній відступ */
+    padding: 0; /* Видалити внутрішній відступ */
+}
+
+.pizza-item {
+    width: 30%; /* Або розрахуйте ширину відповідно до вашого макету */
+    margin: 10px; /* Змініть відповідно до бажаного відступу */
+    padding: 20px; /* За необхідності */
+    box-sizing: border-box;
+    border: 1px solid #ddd; /* Додайте рамку, якщо потрібно */
+}
+
+.pizza-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.pizza-item .pizza-title {
+    font-size: 25px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ff8000;
+}
+
+.pizza-item .pizza-type {
+    font-size: 14px;
+    color: #777;
+    margin-top: 5px;
+}
+
+.pizza-item .ingredients {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.pizza-item .sizes {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.pizza-item .small-size {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.pizza-item .big-size {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.pizza-item .big-size label,
+.pizza-item .small-size label {
+    font-size: 14px;
+}
+
+.pizza-item .big-size .buy-button,
+.pizza-item .small-size .buy-button {
+    background-color: #ff8c00;
+    border: none;
+    color: white;
+    padding: 10px 18px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.pizza-item .popular-badge,
+.pizza-item .new-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff8c00;
+    color: white;
+    padding: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.pizza-item .new-badge {
+    background-color: #ff5722;
+}
+
+.pizza-item .popular-badge {
+    background-color: #4caf50;
+}
+
+.cart {
+    width: 20%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    z-index: 1200;
+    margin: 0; /* Видалити внутрішній відступ */
+}
+
+.cart-count {
+    background-color: #f60;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 40%;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.cart h2 {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.btn-order {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff8c00;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.btn-clear-cart {
+    background-color: #ffffff;
+    color: rgb(166, 166, 166);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 10px; /* Простір під кнопкою */
+    margin-left: 10px; /* Відступ від лівого краю */
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cart-item button {
+    background-color: #ff8c00;
+    border: none;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.flag-badge {
+    position: fixed;
+    top: 0px;
+    left: 10px;
+    width: 70px;
+    height: 105px;
+    background-color: #ff8c00;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 90%, 0% 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    word-wrap: break-word;
+    z-index: 1200;
+}
+
+.discount-badge {
+    position: fixed;
+    bottom: 0px;
+    left: 10px;
+    width: 100px;
+    height: 230px;
+    z-index: 1500;
+}
+
+.discount-text {
+    position: fixed;
+    bottom: 40px; /* Adjust the position as needed */
+    left: 10px; /* Align with discount-badge */
+    width: 100px; /* Match the width of the discount-badge */
+    text-align: center; /* Center the text */
+    color: white; /* Adjust color as needed */
+    font-size: 18px; /* Adjust font size as needed */
+    font-weight: bold;
+    z-index: 1501; /* Ensure it appears above the image */
+}
+
+.percentage-text {
+    position: fixed;
+    bottom: 10px; /* Adjust the position as needed */
+    left: 10px; /* Align with discount-badge */
+    width: 100px;
+    text-align: center; /* Center the text */
+    color: white; /* Adjust color as needed */
+    font-size: 18px; /* Adjust font size as needed */
+    font-weight: bold;
+    z-index: 1501;
+}
+
+@media (max-width: 1200px) {
+    .pizza-item {
+        width: 31%;
+        margin: 1%;
+    }
+}
+
+@media (max-width: 992px) {
+    .pizza-item {
+        width: 48%;
+        margin: 1%;
+    }
+}
+
+@media (max-width: 768px) {
+    .pizza-item {
+        width: 98%;
+        margin: 1%;
+    }
+
+    .cart {
+        width: 30%;
+    }
+}
+
+@media (max-width: 576px) {
+    .cart {
+        width: 100%;
+        position: static;
+        height: auto;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    .pizza-list {
+        margin-right: 0;
+    }
+}
